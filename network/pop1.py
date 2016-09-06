@@ -28,7 +28,7 @@ for item in p.list()[1]:
 p.quit()
 
 
-#python pop1.py mail.fiberhome.com igis_gzy
+#python pop1.py mail username
 """
 Password:
 Mailbox has 146 message for a total of 82960776 bytes
