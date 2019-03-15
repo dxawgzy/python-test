@@ -4,6 +4,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.nonmultipart import MIMENonMultipart
 import mimetypes
+
 class SmartMessage:
     """A simplified interface to Python's library for creating email
     messages, with and without MIME attachments."""
@@ -142,14 +143,8 @@ class MailServer(SMTP):
 
 
 
-#msg = SmartMessage("Me <me@example.com>", "You <you@example.com>", "Your picture", "Here is a picture I took of you.")
-#msg = SmartMessage("Me <gzy833231819@163.com>", "You <igis_gzy@fiberhome.com>", "Your picture", "Here is a picture I took of you.")
-msg = SmartMessage("Me <igis_gzy@fiberhome.com>", "You <gzy833231819@163.com>", "Your picture", "Here is a picture I took of you.")
+msg = SmartMessage("Me <me@example.com>", "You <you@example.com>", "Your picture", "Here is a picture I took of you.")
 msg.addAttachment(open("photo.jpg").read(), "photo.jpg")
 #MailServer("localhost").sendMessage(msg)
-#MailServer("mail.163.com", "gzy833231819", "144071370357").sendMessage(msg)
-MailServer("mail.fiberhome.com", "igis_gzy", "gongzy.fh").sendMessage(msg)
+MailServer("mail.xx.com", "name", "password").sendMessage(msg)
 print(str(msg))
-
-
-
